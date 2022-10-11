@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+header div.menu{
+    background-color: white;
+    display: flex;
+    place-content: space-between;
+}
+header ul{
+    list-style-type: none;
+    margin: 35px;
+    padding: 0;
+    display: flex;
+    place-content: flex-start;
+}
+header div.menu nav {
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+#menu, #menu-check {
+    display: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a.uso {
+    font-weight: bold;
+}
+.boton-contacto{
+    background-color: white;
+    color: rgb(78, 126, 7);
+    border: 2px solid;
+    border-radius: 4em;
+    font-weight: bolder;
+    font-size: 0.1;
+    padding: .2em 0.1em;
+    display:inline-block
+}
+div.menu {
+    width: 1080px;
+    margin: 0 auto;
+}
+header a{
+    padding: 1em;
+
+}
+/* a continuación formato de slide */
+.slider-frame {
+    width: 95%;
+    height: auto;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+    
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 250%;
+
+    animation: slide 20s infinite alternate linear;
+}
+
+.slider-frame li {
+    width: 50%;
+    list-style: none;
+    
+}
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+/* configuración media query */
+
+@media only screen and (max-width: 900px) {
+    header div.menu, header div.menu ul, header div.menu ul li {
+        display: inline;
+    }
+    header div.menu nav {
+        width: 100%;
+        display: inline;
+    }
+}
+@media only screen and (max-width: 700px) {
+    header div.menu {
+        display: flex;
+        place-content: space-between;
+    }
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+    #menu {
+        display: block;
+        color: green;
+        background-color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+    #menu:hover{
+        color: white;
+        background-color: green;
+    }
+    #menu-cerrar{
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-abrir {
+        display: none
+    }
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+    header div.menu nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: gray;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.9;
+        color: bisque;
+        font-size: 1.2em;
+    }
+    header div.menu nav ul a {
+        color: bisque;
+        background: none;
+    }
+    header div.menu nav ul, header div.menu ul li {
+        display: block;
+        text-align: right;
+    }
+  
+    header div.contenedor nav .boton-contacto:hover {
+        background: none;
+        color: white;
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(121, 245, 121);
+    
+
+}
+
+
