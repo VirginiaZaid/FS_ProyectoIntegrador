@@ -67,8 +67,21 @@ header a{
   .header .li{
     margin: 0 .5em;
   }
+/*catalogo*/
 
-  
+  .catalogo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .c_caja{
+    width: 10em;
+    height: 10em;
+    border:solid 1px chartreuse;
+    margin: 1em;
+
+}
 
   @media screen and (max-width:480px){
     .header .button{
@@ -102,69 +115,45 @@ header a{
     }
   
   }
+   
 
-/* a continuación formato de slide */
-.slider-frame {
-    width: 95%;
-    height: auto;
-    margin: 100px auto 0;
-    overflow: hidden;
-}
-    
-.slider-frame ul {
-    display: flex;
-    padding: 0;
-    width: 250%;
-
-    animation: slide 20s infinite alternate linear;
+/* Corrusel infinito */
+.container-slider {
+  width: 45%;
+  max-width: 900px;
+  margin: auto;
+  overflow:hidden ;
 }
 
-.slider-frame li {
-    width: 50%;
-    list-style: none;
-    
-}
-.slider-frame img {
-    width: 100%;
+.slider {
+  display: flex;
+  width: 700%;
+  height: 700%;
+  margin-left: -100%;
 }
 
-@keyframes slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+.slider__section {
+width: 100%;
 }
 
-/* configuración media query */
-
-@media only screen and (max-width: 900px) {
-    header div.menu, header div.menu ul, header div.menu ul li {
-        display: inline;
-    }
-    header div.menu nav {
-        width: 100%;
-        display: inline;
-    }
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-    header div.contenedor nav .boton-contacto:hover {
-        background: none;
-        color: white;
-    }
 
     footer{
+      padding:1em;
       text-align: center;
-      background-color: rgb(121, 245, 121)
-      
-       
-    }  
+      background-color: rgb(121, 245, 121)           
+    } 
+    .copyright {
+      font-size: 10px;
+      background-color: white; 
+      text-align: center;     
+    } 
+
 
 
 
